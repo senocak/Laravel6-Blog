@@ -10,6 +10,7 @@ use Response;
 use Illuminate\Support\Facades\View;
 
 class HomeController extends Controller{
+    // home
     private $_paginate = 11;
     public function __construct(){
         View::share('user', User::select("name","about","social","resim")->where("id",1)->firstOrFail());
